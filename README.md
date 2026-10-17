@@ -1,5 +1,8 @@
 # Splash · 玻璃水花播放器
 
+[![test](https://github.com/vnf123/splash/actions/workflows/test.yml/badge.svg)](https://github.com/vnf123/splash/actions/workflows/test.yml)
+[![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 > 隔着一扇淋湿的玻璃听歌：音乐越响，水花越猛。
 
 把本地音频拖进窗口，Web Audio 实时解析响度与频谱——鼓点会砸在玻璃上溅起水花，高频带来细密的雨雾，而所有画面都要透过一层用 WebGL 写的雾面玻璃折射合成。
@@ -73,4 +76,6 @@ server.mjs          零依赖本地静态服务器（只监听 127.0.0.1）
 
 ## License
 
-[MIT](LICENSE)
+[Apache License 2.0](LICENSE) © 2026 XiaoNan
+
+你可以自由使用、修改、分发本项目（包括商业用途），但需保留版权与许可声明，并在修改过的文件中标注变更。
