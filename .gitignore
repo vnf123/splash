@@ -1,0 +1,15 @@
+# 依赖
+node_modules/
+
+# 日志与编辑器
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+
+# 本地环境变量
+.env
+.env.*
+!.env.example

@@ -1,0 +1,28 @@
+{
+  "name": "splash",
+  "version": "0.1.0",
+  "description": "隔着淋湿玻璃的音乐播放器：音频越响，水花越猛",
+  "type": "module",
+  "license": "MIT",
+  "author": "XiaoNan",
+  "homepage": "https://vnf123.github.io/splash/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnf123/splash.git"
+  },
+  "keywords": [
+    "webgl",
+    "web-audio",
+    "audio-visualizer",
+    "shader",
+    "liquid-glass",
+    "music-player"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test \"test/*.test.js\""
+  }
+}

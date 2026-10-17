@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="隔着一扇淋湿的玻璃听歌：音乐越响，水花越猛。" />
+    <title>Splash · 玻璃水花播放器</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body data-state="empty">
+    <canvas id="view" aria-hidden="true"></canvas>
+
+    <main>
+      <h1 class="sr-only">Splash 玻璃水花播放器</h1>
+
+      <section id="intro" class="intro" aria-labelledby="intro-title">
+        <h2 id="intro-title">隔着玻璃听雨</h2>
+        <p>导入一首歌，音乐越响，水花越猛。</p>
+        <button id="pick" class="btn-primary" type="button">选择音频文件</button>
+        <p class="hint">也可以直接把文件拖进窗口 · 支持 MP3 / WAV / FLAC / OGG / M4A</p>
+        <p class="hint">播放时轻点玻璃，可把水痕刮干净</p>
+        <p class="loading" aria-hidden="true">正在载入…</p>
+      </section>
+
+      <section id="dock" class="dock" aria-label="播放控制">
+        <button id="play" class="btn-icon" type="button" aria-label="播放" data-state="paused">
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>
+          <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" /></svg>
+        </button>
+        <div class="seek">
+          <span id="cur" class="time">0:00</span>
+          <input id="seek" type="range" min="0" max="1000" step="1" value="0" aria-label="播放进度" />
+          <span id="dur" class="time">0:00</span>
+        </div>
+        <label class="slider">
+          <span>音量</span>
+          <input id="vol" type="range" min="0" max="100" value="85" />
+        </label>
+        <label class="slider">
+          <span>水花</span>
+          <input id="power" type="range" min="0" max="150" value="100" />
+        </label>
+        <button id="wipe" class="btn-ghost" type="button" title="也可以轻点玻璃或按 W">擦玻璃</button>
+        <button id="swap" class="btn-ghost" type="button">换一首</button>
+      </section>
+    </main>
+
+    <input id="file" type="file" accept="audio/*,.mp3,.wav,.flac,.ogg,.m4a,.aac,.opus" hidden />
+    <div id="drop-hint" class="drop-hint" aria-hidden="true">松手，让音乐落到玻璃上</div>
+    <p id="status" class="toast" role="status" aria-live="polite"></p>
+  </body>
+</html>
