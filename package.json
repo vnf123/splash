@@ -23,6 +23,6 @@
   },
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test \"test/*.test.js\""
+    "test": "node --test test/"
   }
 }
